@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>My idea pool API docs</title>
+    <title> Highflyer API Documentation</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;ruby&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -211,7 +211,7 @@
     <div class="toc-wrapper">
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
-              <a href="#" data-language-name="ruby">ruby</a>
+              <a href="#" data-language-name="shell">shell</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -219,337 +219,381 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+            <a href="#badges" class="toc-h1 toc-link" data-title="badges">Badges</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="authentication">Authentication</a>
+            <a href="#high-flyers" class="toc-h1 toc-link" data-title="high-flyers">High Flyers</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#sign-up" class="toc-h2 toc-link" data-title="sign-up">Sign Up</a>
+                    <a href="#get-the-high-flyer-at-a-given-position" class="toc-h2 toc-link" data-title="get-the-high-flyer-at-a-given-position">Get the high flyer at a given position</a>
                   </li>
                   <li>
-                    <a href="#login" class="toc-h2 toc-link" data-title="login">Login</a>
-                  </li>
-                  <li>
-                    <a href="#refresh-token" class="toc-h2 toc-link" data-title="refresh-token">Refresh Token</a>
-                  </li>
-                  <li>
-                    <a href="#logout" class="toc-h2 toc-link" data-title="logout">Logout</a>
+                    <a href="#rate-a-teacher-as-an-highflyer" class="toc-h2 toc-link" data-title="rate-a-teacher-as-an-highflyer">Rate a teacher as an highflyer</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#ideas" class="toc-h1 toc-link" data-title="ideas">Ideas</a>
+            <a href="#students" class="toc-h1 toc-link" data-title="students">Students</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-ideas" class="toc-h2 toc-link" data-title="get-ideas">Get Ideas</a>
+                    <a href="#get-all-students" class="toc-h2 toc-link" data-title="get-all-students">Get all students</a>
                   </li>
                   <li>
-                    <a href="#create-idea" class="toc-h2 toc-link" data-title="create-idea">Create Idea</a>
+                    <a href="#creates-a-student" class="toc-h2 toc-link" data-title="creates-a-student">Creates a Student</a>
                   </li>
                   <li>
-                    <a href="#show-idea" class="toc-h2 toc-link" data-title="show-idea">Show Idea</a>
-                  </li>
-                  <li>
-                    <a href="#update-idea" class="toc-h2 toc-link" data-title="update-idea">Update Idea</a>
-                  </li>
-                  <li>
-                    <a href="#delete-idea" class="toc-h2 toc-link" data-title="delete-idea">Delete Idea</a>
+                    <a href="#rate-a-teacher-as-a-student" class="toc-h2 toc-link" data-title="rate-a-teacher-as-a-student">Rate a teacher as a student</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#user" class="toc-h1 toc-link" data-title="user">User</a>
+            <a href="#teacher" class="toc-h1 toc-link" data-title="teacher">Teacher</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-current-user" class="toc-h2 toc-link" data-title="get-current-user">Get Current User</a>
+                    <a href="#get-all-teachers" class="toc-h2 toc-link" data-title="get-all-teachers">Get all Teachers</a>
+                  </li>
+                  <li>
+                    <a href="#creates-a-teacher" class="toc-h2 toc-link" data-title="creates-a-teacher">Creates a Teacher</a>
+                  </li>
+                  <li>
+                    <a href="#score-a-student-on-a-course" class="toc-h2 toc-link" data-title="score-a-student-on-a-course">Score a student on a course</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#course" class="toc-h1 toc-link" data-title="course">Course</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-courses" class="toc-h2 toc-link" data-title="get-all-courses">Get all Courses</a>
+                  </li>
+                  <li>
+                    <a href="#creates-a-course" class="toc-h2 toc-link" data-title="creates-a-course">Creates a Course</a>
+                  </li>
+                  <li>
+                    <a href="#register-for-a-course-as-a-student" class="toc-h2 toc-link" data-title="register-for-a-course-as-a-student">Register for a course as a student</a>
                   </li>
               </ul>
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='https://bitbucket.org/Adeybee/idea_pool/src/master/'>View on Bitbucket</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>This API documentation page for <a href="'https://bitbucket.org/Adeybee/idea_pool/src/master/">My Idea Pool API</a>.</p>
-<h1 id='authentication'>Authentication</h1><h2 id='sign-up'>Sign Up</h2>
-<p>Required parameters for signing up includes <code>name</code>, valid <code>email</code> and <code>password</code>. 
- A valid password must be at least 8 characters long and must contain at lease one <code>UPPERCASE</code>, one <code>lowercase</code> and one <code>Number</code></p>
-
+        <h1 id='badges'>Badges</h1>
+<p><a href="https://travis-ci.org/mradeybee/highflyers"><img src="https://travis-ci.org/mradeybee/highflyers.svg?branch=master" alt="Build Status" /></a>
+<a href="https://codeclimate.com/github/mradeybee/highflyers/maintainability"><img src="https://api.codeclimate.com/v1/badges/ccac9d2adc936cd1ee16/maintainability" alt="Maintainability" /></a></p>
+<h1 id='high-flyers'>High Flyers</h1>
 <blockquote>
-<p>Sign Up :</p>
+<p>Request: Get Highflyer</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">POST</span> <span class="s1">'/users'</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># This will return the highflyer at position :id</span>
+
+ curl <span class="s1">'https://highflyers.herokuapp.com/high_flyers/1'</span>
 </code></pre>
 <blockquote>
-<p>Request Body: </p>
+<p>Response:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="ss">name: </span><span class="s1">'John Doe'</span><span class="p">,</span> <span class="ss">email: </span><span class="s1">'john@email.com'</span><span class="p">,</span> <span class="ss">password: </span><span class="s1">'PassW0rd'</span> <span class="p">}</span>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+      <span class="s2">"highflyer"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+          <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"student@email.com"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
 </code></pre>
 <blockquote>
-<p><strong>NB</strong> Password must be at least 8 characters long and must contain at lease one <code>UPPERCASE</code>, one <code>lowercase</code> and one <code>Number</code></p>
-
-<p>Response: </p>
+<p>Request: Rate Teacher as Highflyer</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">201</span>
+<pre class="highlight shell tab-shell"><code><span class="c"># This will rate a teacher as a highflyer at position :id</span>
 
-  <span class="p">{</span> <span class="ss">jwt: </span><span class="s1">'Valid JWT Access Token String'</span><span class="p">,</span> <span class="ss">refresh_token: </span><span class="s1">'Valid Refresh Token String'</span> <span class="p">}</span>
-</code></pre><h2 id='login'>Login</h2>
-<p>Required parameters for logging in is the <code>refresh_token</code> </p>
-
-<blockquote>
-<p>Login:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">POST</span> <span class="s1">'/access-tokens'</span>
+  curl https://highflyers.herokuapp.com/high_flyers/1/rate/345 <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -d <span class="s2">"rating=2"</span>
 </code></pre>
 <blockquote>
-<p>Request Body: </p>
+<p>Response:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>  <span class="ss">email: </span><span class="s1">'john@email.com'</span><span class="p">,</span>  <span class="ss">password: </span><span class="s1">'PassW0rd'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Response: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">201</span>
-
-  <span class="p">{</span> <span class="ss">jwt: </span><span class="s1">'Valid JWT Access Token String'</span><span class="p">,</span> <span class="ss">refresh_token: </span><span class="s1">'Valid Refresh Token String'</span> <span class="p">}</span>
-</code></pre><h2 id='refresh-token'>Refresh Token</h2>
-<p>Required parameters to get a new JWT access token in is the <code>refresh_token</code> </p>
-
-<blockquote>
-<p>Refresh Token:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">POST</span> <span class="s1">'/access-tokens/refresh'</span>
-</code></pre>
-<blockquote>
-<p>Request Body: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="ss">refresh_token: </span><span class="s1">'Valid Refresh Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Response: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">200</span>
-
-  <span class="p">{</span> <span class="ss">jwt: </span><span class="s1">'Valid JWT Access Token String'</span> <span class="p">}</span>
-</code></pre><h2 id='logout'>Logout</h2>
-<p>Required parameters for loggin out is the <code>refresh_token</code> </p>
-
-<blockquote>
-<p>Logout:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">DELETE</span> <span class="s1">'/access-tokens'</span>
-</code></pre>
-<blockquote>
-<p>Request Body: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="ss">refresh_token: </span><span class="s1">'Valid Refresh Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Response: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">204</span>
-
-  <span class="p">{</span> <span class="p">}</span>
-</code></pre><h1 id='ideas'>Ideas</h1><h2 id='get-ideas'>Get Ideas</h2>
-<p>Required parameters for getting ideas is the <code>ACCESS TOKEN</code> in the header.</p>
-
-<blockquote>
-<p>SHOW ALL Ideas:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">GET</span> <span class="s1">'/ideas'</span>
-</code></pre>
-<blockquote>
-<p>Request Header: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="s1">'x-access-token'</span> <span class="o">=&gt;</span> <span class="s1">'Valid Access Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Response: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">200</span>
-
-  <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="ss">id: </span><span class="s1">'ga23uktid'</span><span class="p">,</span>
-      <span class="ss">content: </span><span class="s1">'Idea content'</span><span class="p">,</span>
-      <span class="ss">impact: </span><span class="mi">3</span><span class="p">,</span>
-      <span class="ss">ease: </span><span class="mi">8</span><span class="p">,</span>
-      <span class="ss">confidence: </span><span class="mi">8</span><span class="p">,</span>
-      <span class="ss">average_score: </span><span class="mi">6</span><span class="o">.</span><span class="mi">333333333333333</span><span class="p">,</span>
-      <span class="ss">created_at: </span><span class="mi">1517383452</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="ss">id: </span><span class="s1">'ga23ukqck'</span><span class="p">,</span>
-      <span class="ss">content: </span><span class="s1">'Idea content'</span><span class="p">,</span>
-      <span class="ss">impact: </span><span class="mi">2</span><span class="p">,</span>
-      <span class="ss">ease: </span><span class="mi">8</span><span class="p">,</span>
-      <span class="ss">confidence: </span><span class="mi">8</span><span class="p">,</span>
-      <span class="ss">average_score: </span><span class="mi">6</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span>
-      <span class="ss">created_at: </span><span class="mi">1517383452</span>
-    <span class="p">},</span>
-    <span class="p">{</span>
-      <span class="ss">id: </span><span class="s1">'ga23uknz7'</span><span class="p">,</span>
-      <span class="ss">content: </span><span class="s1">'Idea content'</span><span class="p">,</span>
-      <span class="ss">impact: </span><span class="mi">1</span><span class="p">,</span>
-      <span class="ss">ease: </span><span class="mi">8</span><span class="p">,</span>
-      <span class="ss">confidence: </span><span class="mi">8</span><span class="p">,</span>
-      <span class="ss">average_score: </span><span class="mi">5</span><span class="o">.</span><span class="mi">666666666666667</span><span class="p">,</span>
-      <span class="ss">created_at: </span><span class="mi">1517383452</span>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"rating"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"student_id"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+        <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">345</span><span class="p">,</span>
+        <span class="s2">"rating"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-06T07:13:22.778Z"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-06T07:13:22.778Z"</span>
     <span class="p">}</span>
-  <span class="p">]</span>
-</code></pre><h2 id='create-idea'>Create Idea</h2>
-<p>Required parameters for getting ideas is the <code>ACCESS TOKEN</code> in the header and the idea contents - <code>content</code>, <code>impact</code>, <code>ease</code>, <code>confidence</code></p>
-
+<span class="p">}</span>
+</code></pre>
+<p>A high flyer is a student who scores 80 and above in a course taught by a teacher who has 4 star or 5 star rating</p>
+<h3 id='get-the-high-flyer-at-a-given-position'>Get the high flyer at a given position</h3>
+<aside>
+  GET https://highflyers.herokuapp.com/high_flyers/:id
+</aside>
+<h3 id='rate-a-teacher-as-an-highflyer'>Rate a teacher as an highflyer</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/high_flyers/:id/rate/:teacher_id
+  
+  <p>Required body payload: rating</p>
+</aside>
+<h1 id='students'>Students</h1>
 <blockquote>
-<p>CREATE Idea:</p>
+<p>Request: Get all Students</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">POST</span> <span class="s1">'/ideas'</span>
+<pre class="highlight shell tab-shell"><code> curl <span class="s1">'https://highflyers.herokuapp.com/students'</span>
 </code></pre>
 <blockquote>
-<p>Request Header: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="s1">'x-access-token'</span> <span class="o">=&gt;</span> <span class="s1">'Valid Access Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Request Body: </p>
+<p>Response:</p>
 </blockquote>
 <pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
-    <span class="ss">content: </span><span class="s1">'Idea content'</span><span class="p">,</span>
-    <span class="ss">impact: </span><span class="mi">8</span><span class="p">,</span>
-    <span class="ss">ease: </span><span class="mi">8</span><span class="p">,</span>
-    <span class="ss">confidence: </span><span class="mi">8</span>
+    <span class="s2">"students"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+          <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"student1@email.com"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+          <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"student2@email.com"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
   <span class="p">}</span>
 </code></pre>
 <blockquote>
-<p>Response: </p>
+<p>Request: Create Student</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">201</span>
-
-  <span class="p">{</span>
-    <span class="ss">id: </span><span class="s2">"ga23udr31"</span><span class="p">,</span>
-    <span class="ss">content: </span><span class="s1">'Idea content'</span><span class="p">,</span>
-    <span class="ss">impact: </span><span class="mi">8</span><span class="p">,</span>
-    <span class="ss">ease: </span><span class="mi">8</span><span class="p">,</span>
-    <span class="ss">confidence: </span><span class="mi">8</span>
-    <span class="ss">average_score: </span><span class="mi">8</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span>
-    <span class="ss">created_at: </span><span class="mi">1517383451</span>
-  <span class="p">}</span>
-</code></pre><h2 id='show-idea'>Show Idea</h2>
-<p>Required parameters for getting ideas is the <code>ACCESS TOKEN</code> in the header and the <code>deal id</code></p>
-
-<blockquote>
-<p>SHOW Idea:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">GET</span> <span class="s1">'/idea/:idea_id'</span>
+<pre class="highlight shell tab-shell"><code>  curl https://highflyers.herokuapp.com/students <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -d <span class="s2">"name=Firstname Lastname&amp;email=student3@email.com"</span>
 </code></pre>
 <blockquote>
-<p>Request Header: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="s1">'x-access-token'</span> <span class="o">=&gt;</span> <span class="s1">'Valid Access Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Response: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">200</span>
-
-  <span class="p">{</span>
-    <span class="ss">id: </span><span class="s2">"ga23udr31"</span><span class="p">,</span>
-    <span class="ss">content: </span><span class="s1">'Idea content'</span><span class="p">,</span>
-    <span class="ss">impact: </span><span class="mi">8</span><span class="p">,</span>
-    <span class="ss">ease: </span><span class="mi">8</span><span class="p">,</span>
-    <span class="ss">confidence: </span><span class="mi">8</span>
-    <span class="ss">average_score: </span><span class="mi">8</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span>
-    <span class="ss">created_at: </span><span class="mi">1517383451</span>
-  <span class="p">}</span>
-</code></pre><h2 id='update-idea'>Update Idea</h2>
-<p>Required parameters for getting ideas is the <code>ACCESS TOKEN</code> in the header and the <code>idea id</code></p>
-
-<blockquote>
-<p>UPDATE Idea:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">PUT</span> <span class="s1">'/ideas/:idea_id'</span>
-</code></pre>
-<blockquote>
-<p>Request Header: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="s1">'x-access-token'</span> <span class="o">=&gt;</span> <span class="s1">'Valid Access Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Request Body: </p>
+<p>Response:</p>
 </blockquote>
 <pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
-    <span class="ss">content: </span><span class="s1">'New Idea content'</span><span class="p">,</span>
-    <span class="ss">impact: </span><span class="mi">9</span><span class="p">,</span>
-    <span class="ss">ease: </span><span class="mi">9</span><span class="p">,</span>
-    <span class="ss">confidence: </span><span class="mi">9</span>
+    <span class="s2">"student"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+        <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"student3@email.com"</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 </code></pre>
 <blockquote>
-<p>Response: </p>
+<p>Request: Rate a teacher as a student</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">200</span>
-
-  <span class="p">{</span>
-    <span class="ss">id: </span><span class="s2">"ga23udr31"</span><span class="p">,</span>
-    <span class="ss">content: </span><span class="s1">'New Idea content'</span><span class="p">,</span>
-    <span class="ss">impact: </span><span class="mi">9</span><span class="p">,</span>
-    <span class="ss">ease: </span><span class="mi">9</span><span class="p">,</span>
-    <span class="ss">confidence: </span><span class="mi">8</span>
-    <span class="ss">average_score: </span><span class="mi">9</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span>
-    <span class="ss">created_at: </span><span class="mi">1517383451</span>
+<pre class="highlight shell tab-shell"><code>  curl https://highflyers.herokuapp.com/students/890/rate_teacher/345 <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -d <span class="s2">"rating=2"</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"rating"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"student_id"</span><span class="p">:</span> <span class="mi">890</span><span class="p">,</span>
+        <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">345</span><span class="p">,</span>
+        <span class="s2">"rating"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-06T07:13:22.778Z"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-06T07:13:22.778Z"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre><h3 id='get-all-students'>Get all students</h3>
+<aside>
+  GET https://highflyers.herokuapp.com/students
+</aside>
+<h3 id='creates-a-student'>Creates a Student</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/students
+  <p>Required body payload: name, email</p>
+</aside>
+<h3 id='rate-a-teacher-as-a-student'>Rate a teacher as a student</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/students/:id/rate_teacher/:teacher_id
+  <p>Required body payload: rating</p>
+</aside>
+<h1 id='teacher'>Teacher</h1>
+<blockquote>
+<p>Request: Get all teachers</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code> curl <span class="s1">'https://highflyers.herokuapp.com/teachers'</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"teachers"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+          <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"teacher1@email.com"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+          <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"teacher2@email.com"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
   <span class="p">}</span>
-</code></pre><h2 id='delete-idea'>Delete Idea</h2>
-<p>Required parameters for getting ideas is the <code>ACCESS TOKEN</code> in the header and the <code>idea id</code></p>
-
-<blockquote>
-<p>DELETE Idea:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">DELETE</span> <span class="s1">'/ideas/:idea_id'</span>
 </code></pre>
 <blockquote>
-<p>Request Header: </p>
+<p>Request: Create a teacher</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="s1">'x-access-token'</span> <span class="o">=&gt;</span> <span class="s1">'Valid Access Token String'</span> <span class="p">}</span>
+<pre class="highlight shell tab-shell"><code>  curl https://highflyers.herokuapp.com/teachers <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -d <span class="s2">"name=Firstname Lastname&amp;email=teacher3@email.com"</span>
 </code></pre>
 <blockquote>
-<p>Response: </p>
+<p>Response:</p>
 </blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">204</span>
-
-  <span class="p">{}</span>
-</code></pre><h1 id='user'>User</h1><h2 id='get-current-user'>Get Current User</h2>
-<p>Required parameters for getting ideas is the <code>ACCESS TOKEN</code> in the header.</p>
-
-<blockquote>
-<p>SHOW current user:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="no">GET</span> <span class="s1">'/me'</span>
-</code></pre>
-<blockquote>
-<p>Request Header: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span> <span class="s1">'x-access-token'</span> <span class="o">=&gt;</span> <span class="s1">'Valid Access Token String'</span> <span class="p">}</span>
-</code></pre>
-<blockquote>
-<p>Response: </p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code>  <span class="ss">status: </span><span class="mi">200</span>
-
-  <span class="p">{</span>
-    <span class="ss">email: </span><span class="s1">'john@email.com'</span><span class="p">,</span>
-    <span class="ss">name: </span><span class="s1">'John Doe'</span><span class="p">,</span>
-    <span class="ss">avatar_url: </span><span class="s1">'https://www.gravatar.com/avatar/b36aafe03e05a85031fd8c411b69f792?d=mm&amp;s=200'</span>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"teacher"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Firstname Lastname"</span><span class="p">,</span>
+        <span class="s2">"email"</span><span class="p">:</span> <span class="s2">"teacher3@email.com"</span><span class="p">,</span>
+        <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span><span class="p">,</span>
+        <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:54:01.559Z"</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 </code></pre>
+<blockquote>
+<p>Request: Score a student on a course</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>  curl https://highflyers.herokuapp.com/teachers/890/score_student/345 <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -d <span class="s2">"course_id=2&amp;score=60"</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"result"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"student_id"</span><span class="p">:</span> <span class="mi">345</span><span class="p">,</span>
+      <span class="s2">"course_id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">890</span><span class="p">,</span>
+      <span class="s2">"score"</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T14:38:22.982Z"</span><span class="p">,</span>
+      <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-06T07:45:13.466Z"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre><h3 id='get-all-teachers'>Get all Teachers</h3>
+<aside>
+  GET https://highflyers.herokuapp.com/teachers
+</aside>
+<h3 id='creates-a-teacher'>Creates a Teacher</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/teachers
+  <p>Required body payload: name, email</p>
+</aside>
+<h3 id='score-a-student-on-a-course'>Score a student on a course</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/teachers/:id/score_student/:student_id
+  <p>Required body payload: course_id, score</p>
+</aside>
+<h1 id='course'>Course</h1>
+<blockquote>
+<p>Request: Get all courses</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code> curl <span class="s1">'https://highflyers.herokuapp.com/courses'</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"courses"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Social Sciences"</span><span class="p">,</span>
+          <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">"code"</span><span class="p">:</span> <span class="s2">"SSC103"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:56:53.977Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:56:53.977Z"</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Social Maths"</span><span class="p">,</span>
+          <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s2">"code"</span><span class="p">:</span> <span class="s2">"SSM103"</span><span class="p">,</span>
+          <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:56:53.977Z"</span><span class="p">,</span>
+          <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:56:53.977Z"</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Request: Create a course</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>  curl https://highflyers.herokuapp.com/courses <span class="se">\</span>
+    -X POST <span class="se">\</span>
+    -d <span class="s2">"name=Oral English&amp;teacher_id=349&amp;code=OE100"</span>
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"course"</span><span class="p">:</span>  <span class="p">{</span>
+      <span class="s2">"id"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Oral English"</span><span class="p">,</span>
+      <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">349</span><span class="p">,</span>
+      <span class="s2">"code"</span><span class="p">:</span> <span class="s2">"OE100"</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:56:53.977Z"</span><span class="p">,</span>
+      <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T13:56:53.977Z"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Request: Register for a course as a student</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>  curl https://highflyers.herokuapp.com/courses/2/register/345 <span class="se">\</span>
+    -X POST
+</code></pre>
+<blockquote>
+<p>Response:</p>
+</blockquote>
+<pre class="highlight ruby tab-ruby"><code>  <span class="p">{</span>
+    <span class="s2">"registration"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="s2">"student_id"</span><span class="p">:</span> <span class="mi">345</span><span class="p">,</span>
+      <span class="s2">"course_id"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="s2">"teacher_id"</span><span class="p">:</span> <span class="mi">890</span><span class="p">,</span>
+      <span class="s2">"score"</span><span class="p">:</span> <span class="kp">nil</span><span class="p">,</span>
+      <span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"2018-07-04T14:38:22.982Z"</span><span class="p">,</span>
+      <span class="s2">"updated_at"</span><span class="p">:</span> <span class="s2">"2018-07-06T07:45:13.466Z"</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre><h3 id='get-all-courses'>Get all Courses</h3>
+<aside>
+  GET https://highflyers.herokuapp.com/courses
+</aside>
+<h3 id='creates-a-course'>Creates a Course</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/courses
+  <p>Required body payload: name, code, teacher_id</p>
+</aside>
+<h3 id='register-for-a-course-as-a-student'>Register for a course as a student</h3>
+<aside>
+  POST https://highflyers.herokuapp.com/courses/:id/register/:student_id
+</aside>
+
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="ruby">ruby</a>
+                <a href="#" data-language-name="shell">shell</a>
           </div>
       </div>
     </div>
